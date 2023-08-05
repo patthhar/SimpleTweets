@@ -1,3 +1,7 @@
 <resources>
   <string name="app_name">SimpleTweets</string>
+  <string name="internet_error">Internet not available</string>
+  <string name="http_error">Server error</string>
+  <string name="io_error_categories">Error fetching categories</string>
+  <string name="network_error">Network error occured</string>
 </resources>
