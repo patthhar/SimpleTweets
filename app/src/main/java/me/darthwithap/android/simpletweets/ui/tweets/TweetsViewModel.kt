@@ -1,4 +1,4 @@
-package me.darthwithap.android.simpletweets.ui
+package me.darthwithap.android.simpletweets.ui.tweets
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
