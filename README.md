@@ -7,6 +7,7 @@ Jetpack compose and mvvm sample and simple app for me
 - Retrofit
 
 **App Screenshots**
-![tweets](https://github.com/patthhar/SimpleTweets/assets/128719760/1925e88a-dc10-4176-8910-280f14e56762)
-![categories](https://github.com/patthhar/SimpleTweets/assets/128719760/0cecec01-12c9-4abd-87bf-66d3fe6d7c01)
+![tweetsscreen](https://github.com/patthhar/SimpleTweets/assets/128719760/8fbe29bd-9bfa-4926-9926-4baf834503af)
+![categoryscreen](https://github.com/patthhar/SimpleTweets/assets/128719760/36402bf3-a7d4-46c2-8c25-5852231c4f51)
+
 
