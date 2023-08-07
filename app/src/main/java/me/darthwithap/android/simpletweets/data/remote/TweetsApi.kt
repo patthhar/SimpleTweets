@@ -1,6 +1,6 @@
 package me.darthwithap.android.simpletweets.data.remote
 
-import me.darthwithap.android.simpletweets.data.remote.models.TweetsResponse
+import me.darthwithap.android.simpletweets.data.remote.models.SingleTweet
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -13,7 +13,7 @@ interface TweetsApi {
   suspend fun getTweets(
     @Header("X-JSON-Path") categoryHeader: String,
     @Query("meta") meta: Boolean = false
-  ): Response<TweetsResponse>
+  ): Response<List<SingleTweet>>
 
   @GET("b/64ce45de9d312622a38c55d5")
   @Headers("X-JSON-Path:tweets..category")

@@ -1,12 +1,11 @@
 package me.darthwithap.android.simpletweets.data.repository
 
 import android.content.Context
-import android.util.Log
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import me.darthwithap.android.simpletweets.R
 import me.darthwithap.android.simpletweets.data.remote.TweetsApi
-import me.darthwithap.android.simpletweets.domain.model.Tweets
+import me.darthwithap.android.simpletweets.domain.model.Tweet
 import me.darthwithap.android.simpletweets.domain.repository.TweetsRepository
 import me.darthwithap.android.simpletweets.domain.util.Result
 import me.darthwithap.android.simpletweets.domain.util.isInternetConnected
@@ -31,7 +30,7 @@ class TweetsRepositoryImpl @Inject constructor(
     }
   }
 
-  override suspend fun getTweets(category: String): Flow<Result<Tweets>> {
+  override suspend fun getTweets(category: String): Flow<Result<List<Tweet>>> {
     return flow {
       if (!context.isInternetConnected()) {
         emit(Result.Error(context.getString(R.string.internet_error)))
@@ -39,7 +38,7 @@ class TweetsRepositoryImpl @Inject constructor(
       }
       val response = tweetsApi.getTweets("tweets[?(@.category==\"$category\")]")
       if (response.isSuccessful && response.body() != null) {
-        emit(Result.Success(response.body()!!.toTweets()))
+        emit(Result.Success(response.body()!!.map { it.toTweet() }))
       } else emit(Result.Error(context.getString(R.string.network_error)))
     }
   }

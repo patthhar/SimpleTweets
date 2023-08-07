@@ -2,10 +2,10 @@ package me.darthwithap.android.simpletweets.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+val Purple80 = Color(0xFFEDEAFF)
+val PurpleGrey80 = Color(0xFFDFD6EF)
+val Pink80 = Color(0xFFEDD4DB)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val Purple40 = Color(0xFFCDC4E5)
+val PurpleGrey40 = Color(0xFFC6BDD8)
+val Pink40 = Color(0xFFD4B2BD)
